@@ -15,24 +15,7 @@
                                 <div class="date"><a href="i-like-fishing-because-it-is-always-the-great-way-of-relaxing/index.html">May 14, 2017</a></div>
                             </div>
                         </div>
-                        <div class="recent-single-post clearfix have-image">
-                            <a href="my-memorable-story-of-trip-to-grand-canyon-national-park/index.html">
-                                <div class="post-thumb pull-left" style="background-image: url(images/2017/05/grand-canyon.jpg);"></div>
-                            </a>
-                            <div class="post-info">
-                                <h4 class="post-title"><a href="my-memorable-story-of-trip-to-grand-canyon-national-park/index.html">My Memorable story of trip to grand canyon National Park</a></h4>
-                                <div class="date"><a href="my-memorable-story-of-trip-to-grand-canyon-national-park/index.html">May 14, 2017</a></div>
-                            </div>
-                        </div>
-                        <div class="recent-single-post clearfix have-image">
-                            <a href="camping-in-an-abandoned-house-under-the-starry-night-at-hill-top/index.html">
-                                <div class="post-thumb pull-left" style="background-image: url(images/2017/05/starry-night.jpg);"></div>
-                            </a>
-                            <div class="post-info">
-                                <h4 class="post-title"><a href="camping-in-an-abandoned-house-under-the-starry-night-at-hill-top/index.html">Camping in an abandoned house under the starry night at hill top</a></h4>
-                                <div class="date"><a href="camping-in-an-abandoned-house-under-the-starry-night-at-hill-top/index.html">May 14, 2017</a></div>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
                 <!-- end widget -->                </div>
@@ -44,37 +27,38 @@
                         <a href="tag/adventure/index.html">Adventure</a><a href="tag/getting-started/index.html">Getting Started</a><a href="tag/lifestyle/index.html">Lifestyle</a><a href="tag/music/index.html">Music</a><a href="tag/nature/index.html">Nature</a><a href="tag/travel/index.html">Travel</a><a href="tag/video/index.html">Video</a>
                     </div>
                 </div>
-                <!-- end tag widget -->                    <div class="widget">
-                    <h4 class="widget-title h6">Subscribe to Polar</h4>
-                    <div class="content tagcloud">
-                        <section class="gh-subscribe">
-                            <p>Get the latest posts delivered right to your inbox.</p>
-                            <form method="post" action="http://polar.gbjsolution.com/subscribe/" class="sign-up-form">
-                                <input class="confirm" type="hidden" name="confirm"  /><input class="location" type="hidden" name="location"  /><input class="referrer" type="hidden" name="referrer"  />
+                <!-- end tag widget -->
+                {{--<div class="widget">--}}
+                    {{--<h4 class="widget-title h6">Subscribe to Polar</h4>--}}
+                    {{--<div class="content tagcloud">--}}
+                        {{--<section class="gh-subscribe">--}}
+                            {{--<p>Get the latest posts delivered right to your inbox.</p>--}}
+                            {{--<form method="post" action="http://polar.gbjsolution.com/subscribe/" class="sign-up-form">--}}
+                                {{--<input class="confirm" type="hidden" name="confirm"  /><input class="location" type="hidden" name="location"  /><input class="referrer" type="hidden" name="referrer"  />--}}
 
-                                <div class="form-group">
-                                    <input class="form-control" type="email" name="email" placeholder="Enter your email..." />
-                                </div>
-                                <button class="btn btn-primary" type="submit"><span>Subscribe</span></button>
+                                {{--<div class="form-group">--}}
+                                    {{--<input class="form-control" type="email" name="email" placeholder="Enter your email..." />--}}
+                                {{--</div>--}}
+                                {{--<button class="btn btn-primary" type="submit"><span>Subscribe</span></button>--}}
 
-                                <script>
-                                    (function(g,h,o,s,t){
-                                        var buster = function(b,m) {
-                                            h[o]('input.'+b).forEach(function (i) {
-                                                i.value=i.value || m;
-                                            });
-                                        };
-                                        buster('location', g.location.href);
-                                        buster('referrer', h.referrer);
-                                    })(window,document,'querySelectorAll','value');
-                                </script>
+                                {{--<script>--}}
+                                    {{--(function(g,h,o,s,t){--}}
+                                        {{--var buster = function(b,m) {--}}
+                                            {{--h[o]('input.'+b).forEach(function (i) {--}}
+                                                {{--i.value=i.value || m;--}}
+                                            {{--});--}}
+                                        {{--};--}}
+                                        {{--buster('location', g.location.href);--}}
+                                        {{--buster('referrer', h.referrer);--}}
+                                    {{--})(window,document,'querySelectorAll','value');--}}
+                                {{--</script>--}}
 
-                            </form>
+                            {{--</form>--}}
 
 
-                        </section>
-                    </div>
-                </div>
+                        {{--</section>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
                 <!-- end end widget -->                </div>
             <div class="col-sm-4">
                 <!-- start tag widget -->
@@ -84,9 +68,9 @@
                         <p>
                             It's a suitable place for adding small info about your site. Here you can add any text or html like this <strong>Bold Text</strong> or anything else.
                         </p>
-                        <p>
-                            All widgets in this footer are reorderable. An email subscription form widget is also available within the theme. Which you can use in place of this text widget.
-                        </p>
+                        {{--<p>--}}
+                            {{--All widgets in this footer are reorderable. An email subscription form widget is also available within the theme. Which you can use in place of this text widget.--}}
+                        {{--</p>--}}
                     </div>
                 </div>
                 <!-- end tag widget -->                </div>

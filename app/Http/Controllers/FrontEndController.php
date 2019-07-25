@@ -22,11 +22,11 @@ class FrontEndController extends Controller
         return view('stories');
     }
 
-    public function authorarchive(){
+    public function authorArchive(){
         return view('author-archive');
     }
 
-    public function singleauthorarchive(){
+    public function singleauthorArchive(){
         return view('single-author-archive');
     }
 

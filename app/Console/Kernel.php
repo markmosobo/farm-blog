@@ -2,8 +2,15 @@
 
 namespace App\Console;
 
+use App\Jobs\GenerateRentBills;
+use App\Jobs\ScheduleReminders;
+use App\Jobs\SendReminder;
+use App\Jobs\SendSms;
+use App\Models\CustomerMessage;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 
 class Kernel extends ConsoleKernel
 {
@@ -24,8 +31,26 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        // $schedule->command('inspire')
-        //          ->hourly();
+        $schedule->job(new GenerateRentBills())->everyMinute();
+//        $schedule->job(new ScheduleReminders())->everyMinute();
+//        $schedule->call(function () {
+////            Log::info('executing');
+//            $customerMessages = CustomerMessage::where('sent',false)->get();
+//            if(count($customerMessages)){
+//                foreach ($customerMessages as $message){
+//                    SendSms::dispatch($message->message,$message->phone_number);
+//                    $message = CustomerMessage::find($message->id);
+//                    $message->sent = true;
+//                    $message->save();
+//                }
+//            }
+//
+//        })->everyMinute();
+
+        // make database backup
+        $schedule->command('backup:run --only-db')->hourly();
+
+        $schedule->command('backup:clean')->daily();
     }
 
     /**
