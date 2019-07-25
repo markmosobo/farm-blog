@@ -2,7 +2,7 @@
 Route::get('/','FrontEndController@index');
 Route::get('/about','FrontEndController@about');
 Route::get('/contact','FrontEndController@contact');
-Route::get('/stories','FrontEndController@stories');
+Route::get('/allstories','FrontEndController@stories');
 Route::get('/author-archive','FrontEndController@authorArchive');
 Route::get('/single-author-archive','FrontEndController@singleauthorArchive');
 Route::get('/story-categories','FrontEndController@storyCategories');
@@ -212,3 +212,7 @@ Route::resource('crops', 'CropController');
 Route::resource('farmtools', 'FarmtoolController');
 
 Route::resource('abouts', 'AboutController');
+
+Route::resource('authors', 'AuthorController');
+
+Route::resource('stories', 'StoryController');

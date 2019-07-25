@@ -9,7 +9,7 @@
             <ul>
                 <li class="home current-menu-item"><a href="{{url('/')}}">Home</a></li>
                 {{--<li class="style-guide"><a href="style-guide/index.html">Style Guide</a></li>--}}
-                <li class="author-archive"><a href="{{url('/stories')}}">Stories</a></li>
+                <li class="author-archive"><a href="{{url('/allstories')}}">Stories</a></li>
                 <li class="about"><a href="{{url('/about')}}">About</a></li>
                 <li class="tag-archive"><a href="{{url('/author-archive')}}">Author Archive</a></li>
                 <li class="contact"><a href="{{url('/contact')}}">Contact</a></li>

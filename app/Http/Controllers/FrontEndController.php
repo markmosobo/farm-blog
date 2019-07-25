@@ -19,7 +19,7 @@ class FrontEndController extends Controller
     }
 
     public function stories(){
-        return view('stories');
+        return view('allstories');
     }
 
     public function authorArchive(){

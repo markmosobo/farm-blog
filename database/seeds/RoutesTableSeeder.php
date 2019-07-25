@@ -179,7 +179,7 @@ class RoutesTableSeeder extends Seeder
         $child = Route::create([
             'route_name'=>'Manage Authors',
             'parent_route' => $parent->id,
-            'url'=>'landlords'
+            'url'=>'authors'
         ]);
         $child->roles()->attach($admin);
         $child->roles()->attach($frontOffice);
@@ -189,7 +189,7 @@ class RoutesTableSeeder extends Seeder
         $child = Route::create([
             'route_name'=>'Manage Stories',
             'parent_route' => $parent->id,
-            'url'=>'landlords'
+            'url'=>'stories'
         ]);
         $child->roles()->attach($admin);
         $child->roles()->attach($frontOffice);
