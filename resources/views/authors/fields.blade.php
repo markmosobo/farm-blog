@@ -5,27 +5,27 @@
 </div>
 
 <!-- Author Image Path Field -->
-<div class="form-group col-sm-12">
-    {!! Form::label('author_image_path', 'Author Image Path:') !!}
-    {!! Form::text('author_image_path', null, ['class' => 'form-control']) !!}
-</div>
-
-<!-- Author Description Field -->
-<div class="form-group col-sm-12">
-    {!! Form::label('author_description', 'Author Description:') !!}
-    {!! Form::text('author_description', null, ['class' => 'form-control']) !!}
-</div>
-
-<!-- Author Facebook Field -->
-<div class="form-group col-sm-12">
-    {!! Form::label('author_facebook', 'Author Facebook:') !!}
-    {!! Form::text('author_facebook', null, ['class' => 'form-control']) !!}
+<div class="form-group col-sm-6">
+    {!! Form::label('author_image_path', 'Upload Author Image:') !!}
+    {!! Form::file('author_image_path', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Author Twitter Field -->
-<div class="form-group col-sm-12">
+<div class="form-group col-sm-6">
     {!! Form::label('author_twitter', 'Author Twitter:') !!}
     {!! Form::text('author_twitter', null, ['class' => 'form-control']) !!}
+</div>
+
+<!-- Author Background Image Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('author_background_image', 'Author Background Image:') !!}
+    {!! Form::file('author_background_image', null, ['class' => 'form-control']) !!}
+</div>
+
+<!-- Author Facebook Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('author_facebook', 'Author Facebook:') !!}
+    {!! Form::text('author_facebook', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Author Location Field -->
@@ -34,9 +34,11 @@
     {!! Form::text('author_location', null, ['class' => 'form-control']) !!}
 </div>
 
-<!-- Author Background Image Field -->
+<!-- Author Description Field -->
 <div class="form-group col-sm-12">
-    {!! Form::label('author_background_image', 'Author Background Image:') !!}
-    {!! Form::text('author_background_image', null, ['class' => 'form-control']) !!}
+    {!! Form::label('author_description', 'Author Description:') !!}
+    {!! Form::text('author_description', null, ['class' => 'form-control']) !!}
 </div>
+
+
 

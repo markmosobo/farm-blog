@@ -206,6 +206,33 @@ class RoutesTableSeeder extends Seeder
         $child->roles()->attach($manager);
         $child->roles()->attach($coreAdmin);
 
+        ####borrowing and lending
+        $parent = Route::create([
+            'route_name'=> 'Exchange Programmes',
+            'icon'=> 'fa-users',
+            'sequence'=>3,
+        ]);
+
+        $child = Route::create([
+            'route_name'=>'Lent Farm Tools',
+            'parent_route' => $parent->id,
+            'url'=>'lendfarmtools'
+        ]);
+        $child->roles()->attach($admin);
+        $child->roles()->attach($frontOffice);
+        $child->roles()->attach($manager);
+        $child->roles()->attach($coreAdmin);
+
+        $child = Route::create([
+            'route_name'=>'Borrowed Farm Tools',
+            'parent_route' => $parent->id,
+            'url'=>'borrowedfarmtools'
+        ]);
+        $child->roles()->attach($admin);
+        $child->roles()->attach($frontOffice);
+        $child->roles()->attach($manager);
+        $child->roles()->attach($coreAdmin);
+
         #### user management
         $user_mngt = new Route();
         $user_mngt->route_name = 'User Manager';

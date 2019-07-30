@@ -6,6 +6,7 @@ use App\DataTables\StoryDataTable;
 use App\Http\Requests;
 use App\Http\Requests\CreateStoryRequest;
 use App\Http\Requests\UpdateStoryRequest;
+use App\Models\Author;
 use App\Repositories\StoryRepository;
 use Flash;
 use App\Http\Controllers\AppBaseController;
@@ -29,7 +30,7 @@ class StoryController extends AppBaseController
      */
     public function index(StoryDataTable $storyDataTable)
     {
-        return $storyDataTable->render('stories.index');
+        return $storyDataTable->render('stories.index',['authors'=>Author::all()]);
     }
 
     /**
@@ -77,7 +78,7 @@ class StoryController extends AppBaseController
             return redirect(route('stories.index'));
         }
 
-        return view('stories.show')->with('story', $story);
+        return response()->json($story);
     }
 
     /**

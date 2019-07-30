@@ -77,7 +77,7 @@ class AuthorController extends AppBaseController
             return redirect(route('authors.index'));
         }
 
-        return view('authors.show')->with('author', $author);
+        return response()->json($author);
     }
 
     /**

@@ -13,17 +13,17 @@
                         <div class="avatar-wrap">
                             <img src="http://www.gravatar.com/avatar/021e64775176cc4c7018e5e867f17de2?s=250&amp;d=mm&amp;r=x" alt="Author image" class="avatar">
                         </div>
-                        <h1 class="author-name h3">Biswajit Saha</h1>
+                        <h1 class="author-name h3">{{$author->author_name}}</h1>
                         <div class="meta-info">
                             <span class="post-count">Total 6 Posts</span>
 
                         </div>
-                        <p class="description">Developer at GBJ solution. I love to travel, make new friends. I prefer tea over coffee.</p>
+                        <p class="description">{{$author->author_description}}</p>
                         <ul class="author-social">
                             <li><a href="https://twitter.com/gbjsolution"><i class="fa fa-twitter"></i></a></li>
                             <li><a href="https://www.facebook.com/gbjsolution"><i class="fa fa-facebook"></i></a></li>
                             <li><a href="http://gbjsolution.com/" target="_blank"><i class="fa fa-globe"></i></a></li>
-                            <li class="location"><i class="fa fa-map-marker"></i>India</li>
+                            <li class="location"><i class="fa fa-map-marker"></i>{{$author->author_location}}</li>
                         </ul>
                     </div>
                 </div>

@@ -30,6 +30,8 @@
         <div class="tag-list-wrap">
             <div class="container">
                 <div class="row is-flex">
+                    @foreach($stories as $story)
+                        @if($story->story_category=='Travel')
                     <div class="col-sm-6 col-md-4 col-xs-12">
                         <article class="post post-card">
                             <a href="{{url('/story-categories')}}" class="permalink">
@@ -43,6 +45,7 @@
                             </div>
                         </article>
                     </div>
+                        @elseif($story->story_category=='Lifestyle')
                     <div class="col-sm-6 col-md-4 col-xs-12">
                         <article class="post post-card">
                             <a href="../tag/lifestyle/index.html" class="permalink">
@@ -56,6 +59,7 @@
                             </div>
                         </article>
                     </div>
+                        @elseif($story->story_category=='Music')
                     <div class="col-sm-6 col-md-4 col-xs-12">
                         <article class="post post-card">
                             <a href="../tag/music/index.html" class="permalink">
@@ -69,32 +73,21 @@
                             </div>
                         </article>
                     </div>
+                        @elseif($story->story_category=='Nature')
                     <div class="col-sm-6 col-md-4 col-xs-12">
-                        <article class="post post-card">
-                            <a href="../tag/getting-started/index.html" class="permalink">
-                                <div class="featured-image" style="background-image: url(images/2018/08/lake.jpg)"></div>
-                            </a>
-                            <div class="content-wrap">
-                                <div class="entry-header align-center">
-                                    <span class="category"><a href="../tag/getting-started/index.html" rel="bookmark">1 Post</a></span>
-                                    <h2 class="title h4"><a href="../tag/getting-started/index.html" rel="bookmark">Getting Started</a></h2>
-                                </div>
+                                <article class="post post-card">
+                                    <a href="../tag/nature/index.html" class="permalink">
+                                        <div class="featured-image" style="background-image: url(images/2017/05/red-stone.jpg)"></div>
+                                    </a>
+                                    <div class="content-wrap">
+                                        <div class="entry-header align-center">
+                                            <span class="category"><a href="../tag/nature/index.html" rel="bookmark">1 Post</a></span>
+                                            <h2 class="title h4"><a href="../tag/nature/index.html" rel="bookmark">Nature</a></h2>
+                                        </div>
+                                    </div>
+                                </article>
                             </div>
-                        </article>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-xs-12">
-                        <article class="post post-card">
-                            <a href="../tag/nature/index.html" class="permalink">
-                                <div class="featured-image" style="background-image: url(images/2017/05/red-stone.jpg)"></div>
-                            </a>
-                            <div class="content-wrap">
-                                <div class="entry-header align-center">
-                                    <span class="category"><a href="../tag/nature/index.html" rel="bookmark">1 Post</a></span>
-                                    <h2 class="title h4"><a href="../tag/nature/index.html" rel="bookmark">Nature</a></h2>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
+                        @elseif($story->story_category=='Video')
                     <div class="col-sm-6 col-md-4 col-xs-12">
                         <article class="post post-card">
                             <a href="../tag/video/index.html" class="permalink">
@@ -108,6 +101,7 @@
                             </div>
                         </article>
                     </div>
+                        @elseif($story->story_category=='Adventure')
                     <div class="col-sm-6 col-md-4 col-xs-12">
                         <article class="post post-card">
                             <a href="../tag/adventure/index.html" class="permalink">
@@ -121,6 +115,22 @@
                             </div>
                         </article>
                     </div>
+                        @else
+                    <div class="col-sm-6 col-md-4 col-xs-12">
+                                <article class="post post-card">
+                                    <a href="../tag/getting-started/index.html" class="permalink">
+                                        <div class="featured-image" style="background-image: url(images/2018/08/lake.jpg)"></div>
+                                    </a>
+                                    <div class="content-wrap">
+                                        <div class="entry-header align-center">
+                                            <span class="category"><a href="../tag/getting-started/index.html" rel="bookmark">1 Post</a></span>
+                                            <h2 class="title h4"><a href="../tag/getting-started/index.html" rel="bookmark">Getting Started</a></h2>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        @endif
+                    @endforeach
                 </div>
             </div>
         </div>

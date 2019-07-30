@@ -2,16 +2,21 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\About;
+use App\Models\Author;
+use App\Models\Story;
 use Illuminate\Http\Request;
 
 class FrontEndController extends Controller
 {
     public function index(){
-        return view('index');
+        $stories=Story::all();
+        return view('index',['stories'=>$stories]);
     }
 
     public function about(){
-        return view('about');
+        $abouts=About::all();
+        return view('about',['abouts'=>$abouts]);
     }
 
     public function contact(){
@@ -19,22 +24,25 @@ class FrontEndController extends Controller
     }
 
     public function stories(){
-        return view('allstories');
+        $stories=Story::orderByDesc('story_date');
+        return view('allstories',['stories'=>$stories]);
     }
 
     public function authorArchive(){
-        return view('author-archive');
+        return view('author-archive',['authors'=>Author::all()]);
     }
 
-    public function singleauthorArchive(){
-        return view('single-author-archive');
+    public function singleauthorArchive($id){
+        $author=Author::find($id);
+        return view('single-author-archive')->withAuthor($author);
     }
 
     public function storyCategories(){
         return view('story-categories');
     }
 
-    public function singleStory(){
-        return view('single-story');
+    public function singleStory($id){
+        $story=Story::find($id);
+        return view('single-story')->withStory($story);
     }
 }

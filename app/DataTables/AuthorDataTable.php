@@ -44,7 +44,7 @@ class AuthorDataTable extends DataTable
             ->minifiedAjax()
             ->addAction(['width' => '80px'])
             ->parameters([
-                'dom'     => 'Bfrtip',
+//                'dom'     => 'Bfrtip',
                 'order'   => [[0, 'desc']],
                 'buttons' => [
                     'create',
@@ -65,12 +65,12 @@ class AuthorDataTable extends DataTable
     {
         return [
             'author_name',
-            'author_image_path',
+//            'author_image_path',
             'author_description',
-            'author_facebook',
-            'author_twitter',
+//            'author_facebook',
+//            'author_twitter',
             'author_location',
-            'author_background_image'
+//            'author_background_image'
         ];
     }
 

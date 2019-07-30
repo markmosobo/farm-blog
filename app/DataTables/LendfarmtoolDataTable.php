@@ -2,11 +2,11 @@
 
 namespace App\DataTables;
 
-use App\Models\Story;
+use App\Models\Lendfarmtool;
 use Yajra\DataTables\Services\DataTable;
 use Yajra\DataTables\EloquentDataTable;
 
-class StoryDataTable extends DataTable
+class LendfarmtoolDataTable extends DataTable
 {
     /**
      * Build DataTable class.
@@ -18,7 +18,7 @@ class StoryDataTable extends DataTable
     {
         $dataTable = new EloquentDataTable($query);
 
-        return $dataTable->addColumn('action', 'stories.datatables_actions');
+        return $dataTable->addColumn('action', 'lendfarmtools.datatables_actions');
     }
 
     /**
@@ -27,7 +27,7 @@ class StoryDataTable extends DataTable
      * @param \App\Models\Post $model
      * @return \Illuminate\Database\Eloquent\Builder
      */
-    public function query(Story $model)
+    public function query(Lendfarmtool $model)
     {
         return $model->newQuery();
     }
@@ -44,7 +44,7 @@ class StoryDataTable extends DataTable
             ->minifiedAjax()
             ->addAction(['width' => '80px'])
             ->parameters([
-//                'dom'     => 'Bfrtip',
+                'dom'     => 'Bfrtip',
                 'order'   => [[0, 'desc']],
                 'buttons' => [
                     'create',
@@ -64,14 +64,12 @@ class StoryDataTable extends DataTable
     protected function getColumns()
     {
         return [
-            'story_category',
-//            'story_background_image',
-            'story_title',
-            'story_author_id',
-            'story_date',
-//            'story_image',
-//            'story_quote',
-            'story_content'
+            'farm_tool_id',
+            'lender',
+            'lent_to',
+            'lend_date',
+            'return_date',
+            'status'
         ];
     }
 
@@ -82,6 +80,6 @@ class StoryDataTable extends DataTable
      */
     protected function filename()
     {
-        return 'storiesdatatable_' . time();
+        return 'lendfarmtoolsdatatable_' . time();
     }
 }

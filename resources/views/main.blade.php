@@ -9,10 +9,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- stylesheets -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.minfed3.css?v=d4efd46282">
-    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.minfed3.css?v=d4efd46282">
-    <link rel="stylesheet" type="text/css" href="assets/css/hl-styles/atom-one-darkfed3.css?v=d4efd46282">
-    <link rel="stylesheet" type="text/css" href="assets/css/screenfed3.css?v=d4efd46282">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/bootstrap.minfed3.css?v=d4efd46282')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/font-awesome.minfed3.css?v=d4efd46282')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/hl-styles/atom-one-darkfed3.css?v=d4efd46282')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/screenfed3.css?v=d4efd46282')}}">
     <script>
         /*====================================================
           THEME SETTINGS & GLOBAL VARIABLES
@@ -71,7 +71,7 @@
     </script>
 
     <meta name="generator" content="Ghost 2.12" />
-    <link rel="alternate" type="application/rss+xml" title="Polar" href="rss/index.html" />
+    <link rel="alternate" type="application/rss+xml" title="Farm-app" href="rss/index.html" />
     <style type="text/css">
         nav .media {
             margin-top: 0;

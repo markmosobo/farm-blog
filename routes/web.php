@@ -4,9 +4,9 @@ Route::get('/about','FrontEndController@about');
 Route::get('/contact','FrontEndController@contact');
 Route::get('/allstories','FrontEndController@stories');
 Route::get('/author-archive','FrontEndController@authorArchive');
-Route::get('/single-author-archive','FrontEndController@singleauthorArchive');
+Route::get('/single-author-archive/{id}','FrontEndController@singleauthorArchive');
 Route::get('/story-categories','FrontEndController@storyCategories');
-Route::get('/single-story','FrontEndController@singleStory');
+Route::get('/single-story/{id}','FrontEndController@singleStory');
 
 Auth::routes();
 
@@ -216,3 +216,8 @@ Route::resource('abouts', 'AboutController');
 Route::resource('authors', 'AuthorController');
 
 Route::resource('stories', 'StoryController');
+
+
+Route::resource('lendfarmtools', 'LendfarmtoolController');
+
+Route::resource('borrowedfarmtools', 'BorrowedfarmtoolController');
