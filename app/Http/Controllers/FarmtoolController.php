@@ -77,7 +77,7 @@ class FarmtoolController extends AppBaseController
             return redirect(route('farmtools.index'));
         }
 
-        return view('farmtools.show')->with('farmtool', $farmtool);
+        return response()->json($farmtool);
     }
 
     /**
