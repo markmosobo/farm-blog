@@ -24,7 +24,7 @@ class FrontEndController extends Controller
     }
 
     public function stories(){
-        $stories=Story::orderByDesc('story_date');
+        $stories=Story::all();
         return view('allstories',['stories'=>$stories]);
     }
 
@@ -37,8 +37,34 @@ class FrontEndController extends Controller
         return view('single-author-archive')->withAuthor($author);
     }
 
-    public function storyCategories(){
-        return view('story-categories');
+    public function natureCategories(){
+        $stories=Story::all();
+        return view('nature-story-categories',['stories'=>$stories]);
+    }
+
+    public function travelCategories(){
+        $stories=Story::all();
+        return view('travel-story-categories',['stories'=>$stories]);
+    }
+
+    public function lifestyleCategories(){
+        $stories=Story::all();
+        return view('lifestyle-story-categories',['stories'=>$stories]);
+    }
+
+    public function musicCategories(){
+        $stories=Story::all();
+        return view('music-story-categories',['stories'=>$stories]);
+    }
+
+    public function videoCategories(){
+        $stories=Story::all();
+        return view('video-story-categories',['stories'=>$stories]);
+    }
+
+    public function adventureCategories(){
+        $stories=Story::all();
+        return view('adventure-story-categories',['stories'=>$stories]);
     }
 
     public function singleStory($id){

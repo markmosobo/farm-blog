@@ -5,7 +5,12 @@ Route::get('/contact','FrontEndController@contact');
 Route::get('/allstories','FrontEndController@stories');
 Route::get('/author-archive','FrontEndController@authorArchive');
 Route::get('/single-author-archive/{id}','FrontEndController@singleauthorArchive');
-Route::get('/story-categories','FrontEndController@storyCategories');
+Route::get('/nature-story-categories','FrontEndController@natureCategories');
+Route::get('/travel-story-categories','FrontEndController@travelCategories');
+Route::get('/lifestyle-story-categories','FrontEndController@lifestyleCategories');
+Route::get('/music-story-categories','FrontEndController@musicCategories');
+Route::get('/video-story-categories','FrontEndController@videoCategories');
+Route::get('/adventure-story-categories','FrontEndController@adventureCategories');
 Route::get('/single-story/{id}','FrontEndController@singleStory');
 
 Auth::routes();

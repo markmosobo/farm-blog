@@ -4,6 +4,7 @@
 
 @section('content')
 
+    @foreach($stories as $story)
     <!-- start cover -->
     <section class="cover cover-tag has-image"  style="background-image: url(images/2017/05/tree-closeup.jpg);">
         <div class="container">
@@ -19,7 +20,8 @@
             </div>
         </div>
     </section>
-    <!-- end cover --><!-- start content area -->
+    <!-- end cover -->
+    <!-- start content area -->
     <div class="main-content-area">
         <div class="container post-listing">
             <div class="row is-flex">
@@ -107,5 +109,7 @@
             <!-- end pagination -->	</div>
     </div>
     <!-- end content area -->
+        
+    @endforeach
 
 @stop

@@ -34,13 +34,13 @@
                         @if($story->story_category=='Travel')
                     <div class="col-sm-6 col-md-4 col-xs-12">
                         <article class="post post-card">
-                            <a href="{{url('/story-categories')}}" class="permalink">
+                            <a href="{{url('/travel-story-categories')}}" class="permalink">
                                 <div class="featured-image" style="background-image: url(images/2017/05/tree-closeup.jpg)"></div>
                             </a>
                             <div class="content-wrap">
                                 <div class="entry-header align-center">
-                                    <span class="category"><a href="../tag/travel/index.html" rel="bookmark">3 Posts</a></span>
-                                    <h2 class="title h4"><a href="../tag/travel/index.html" rel="bookmark">Travel</a></h2>
+                                    <span class="category"><a href="#" rel="bookmark">3 Posts</a></span>
+                                    <h2 class="title h4"><a href="{{url('travel-story-categories')}}" rel="bookmark">Travel</a></h2>
                                 </div>
                             </div>
                         </article>
@@ -48,13 +48,13 @@
                         @elseif($story->story_category=='Lifestyle')
                     <div class="col-sm-6 col-md-4 col-xs-12">
                         <article class="post post-card">
-                            <a href="../tag/lifestyle/index.html" class="permalink">
+                            <a href="{{url('lifestyle-story-categories')}}" class="permalink">
                                 <div class="featured-image" style="background-image: url(images/2017/05/girl.jpg)"></div>
                             </a>
                             <div class="content-wrap">
                                 <div class="entry-header align-center">
-                                    <span class="category"><a href="../tag/lifestyle/index.html" rel="bookmark">3 Posts</a></span>
-                                    <h2 class="title h4"><a href="../tag/lifestyle/index.html" rel="bookmark">Lifestyle</a></h2>
+                                    <span class="category"><a href="#" rel="bookmark">3 Posts</a></span>
+                                    <h2 class="title h4"><a href="{{url('lifestyle-story-categories')}}" rel="bookmark">Lifestyle</a></h2>
                                 </div>
                             </div>
                         </article>
@@ -62,13 +62,13 @@
                         @elseif($story->story_category=='Music')
                     <div class="col-sm-6 col-md-4 col-xs-12">
                         <article class="post post-card">
-                            <a href="../tag/music/index.html" class="permalink">
+                            <a href="{{url('music-story-categories')}}" class="permalink">
                                 <div class="featured-image" style="background-image: url(images/2017/05/girl-playing-violine.jpg)"></div>
                             </a>
                             <div class="content-wrap">
                                 <div class="entry-header align-center">
-                                    <span class="category"><a href="../tag/music/index.html" rel="bookmark">2 Posts</a></span>
-                                    <h2 class="title h4"><a href="../tag/music/index.html" rel="bookmark">Music</a></h2>
+                                    <span class="category"><a href="#" rel="bookmark">2 Posts</a></span>
+                                    <h2 class="title h4"><a href="{{url('music-story-categories')}}" rel="bookmark">Music</a></h2>
                                 </div>
                             </div>
                         </article>
@@ -76,13 +76,13 @@
                         @elseif($story->story_category=='Nature')
                     <div class="col-sm-6 col-md-4 col-xs-12">
                                 <article class="post post-card">
-                                    <a href="../tag/nature/index.html" class="permalink">
+                                    <a href="{{url('nature-story-categories')}}" class="permalink">
                                         <div class="featured-image" style="background-image: url(images/2017/05/red-stone.jpg)"></div>
                                     </a>
                                     <div class="content-wrap">
                                         <div class="entry-header align-center">
-                                            <span class="category"><a href="../tag/nature/index.html" rel="bookmark">1 Post</a></span>
-                                            <h2 class="title h4"><a href="../tag/nature/index.html" rel="bookmark">Nature</a></h2>
+                                            <span class="category"><a href="#" rel="bookmark">1 Post</a></span>
+                                            <h2 class="title h4"><a href="{{url('nature-story-categories')}}" rel="bookmark">Nature</a></h2>
                                         </div>
                                     </div>
                                 </article>
@@ -90,13 +90,13 @@
                         @elseif($story->story_category=='Video')
                     <div class="col-sm-6 col-md-4 col-xs-12">
                         <article class="post post-card">
-                            <a href="../tag/video/index.html" class="permalink">
+                            <a href="{{url('video-story-categories')}}" class="permalink">
                                 <div class="featured-image" style="background-image: url(images/2017/05/topich.jpg)"></div>
                             </a>
                             <div class="content-wrap">
                                 <div class="entry-header align-center">
-                                    <span class="category"><a href="../tag/video/index.html" rel="bookmark">1 Post</a></span>
-                                    <h2 class="title h4"><a href="../tag/video/index.html" rel="bookmark">Video</a></h2>
+                                    <span class="category"><a href="#" rel="bookmark">1 Post</a></span>
+                                    <h2 class="title h4"><a href="{{url('video-story-categories')}}" rel="bookmark">Video</a></h2>
                                 </div>
                             </div>
                         </article>
@@ -104,13 +104,13 @@
                         @elseif($story->story_category=='Adventure')
                     <div class="col-sm-6 col-md-4 col-xs-12">
                         <article class="post post-card">
-                            <a href="../tag/adventure/index.html" class="permalink">
+                            <a href="{{url('adventure-story-categories')}}" class="permalink">
                                 <div class="featured-image" style="background-image: url(images/2017/05/yannick-pulver.jpg)"></div>
                             </a>
                             <div class="content-wrap">
                                 <div class="entry-header align-center">
-                                    <span class="category"><a href="../tag/adventure/index.html" rel="bookmark">1 Post</a></span>
-                                    <h2 class="title h4"><a href="../tag/adventure/index.html" rel="bookmark">Adventure</a></h2>
+                                    <span class="category"><a href="#" rel="bookmark">1 Post</a></span>
+                                    <h2 class="title h4"><a href="{{url('adventure-story-categories')}}" rel="bookmark">Adventure</a></h2>
                                 </div>
                             </div>
                         </article>
