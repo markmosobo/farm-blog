@@ -2,7 +2,7 @@
     <div class="row">
         <div class="navbar-header">
             <!-- start logo -->
-            <a class="logo image-logo" href="#"><img src="{{asset('images/2017/05/polar-logo.png')}}" alt="{{config('app.name')}}"></a>
+            {{--<a class="logo image-logo" href="#"><img src="{{asset('images/2017/05/polar-logo.png')}}" alt="{{config('app.name')}}"></a>--}}
             <!-- end logo -->
         </div>
         <nav class="main-menu hidden-sm hidden-xs" id="main-menu">

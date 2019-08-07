@@ -34,7 +34,7 @@
                         @if($story->story_category=='Travel')
                     <div class="col-sm-6 col-md-4 col-xs-12">
                         <article class="post post-card">
-                            <a href="{{url('/travel-story-categories')}}" class="permalink">
+                            <a href="{{url('/single-story/'.$story->id)}}" class="permalink">
                                 <div class="featured-image" style="background-image: url(images/2017/05/tree-closeup.jpg)"></div>
                             </a>
                             <div class="content-wrap">
@@ -48,7 +48,7 @@
                         @elseif($story->story_category=='Lifestyle')
                     <div class="col-sm-6 col-md-4 col-xs-12">
                         <article class="post post-card">
-                            <a href="{{url('lifestyle-story-categories')}}" class="permalink">
+                            <a href="{{url('/single-story/'.$story->id)}}" class="permalink">
                                 <div class="featured-image" style="background-image: url(images/2017/05/girl.jpg)"></div>
                             </a>
                             <div class="content-wrap">
@@ -62,7 +62,7 @@
                         @elseif($story->story_category=='Music')
                     <div class="col-sm-6 col-md-4 col-xs-12">
                         <article class="post post-card">
-                            <a href="{{url('music-story-categories')}}" class="permalink">
+                            <a href="{{url('/single-story/'.$story->id)}}" class="permalink">
                                 <div class="featured-image" style="background-image: url(images/2017/05/girl-playing-violine.jpg)"></div>
                             </a>
                             <div class="content-wrap">
@@ -76,7 +76,7 @@
                         @elseif($story->story_category=='Nature')
                     <div class="col-sm-6 col-md-4 col-xs-12">
                                 <article class="post post-card">
-                                    <a href="{{url('nature-story-categories')}}" class="permalink">
+                                    <a href="{{url('/single-story/'.$story->id)}}" class="permalink">
                                         <div class="featured-image" style="background-image: url(images/2017/05/red-stone.jpg)"></div>
                                     </a>
                                     <div class="content-wrap">
@@ -90,7 +90,7 @@
                         @elseif($story->story_category=='Video')
                     <div class="col-sm-6 col-md-4 col-xs-12">
                         <article class="post post-card">
-                            <a href="{{url('video-story-categories')}}" class="permalink">
+                            <a href="{{url('/single-story/'.$story->id)}}" class="permalink">
                                 <div class="featured-image" style="background-image: url(images/2017/05/topich.jpg)"></div>
                             </a>
                             <div class="content-wrap">
@@ -104,7 +104,7 @@
                         @elseif($story->story_category=='Adventure')
                     <div class="col-sm-6 col-md-4 col-xs-12">
                         <article class="post post-card">
-                            <a href="{{url('adventure-story-categories')}}" class="permalink">
+                            <a href="{{url('/single-story/'.$story->id)}}" class="permalink">
                                 <div class="featured-image" style="background-image: url(images/2017/05/yannick-pulver.jpg)"></div>
                             </a>
                             <div class="content-wrap">
@@ -118,7 +118,7 @@
                         @else
                     <div class="col-sm-6 col-md-4 col-xs-12">
                                 <article class="post post-card">
-                                    <a href="../tag/getting-started/index.html" class="permalink">
+                                    <a href="{{url('/single-story/'.$story->id)}}" class="permalink">
                                         <div class="featured-image" style="background-image: url(images/2018/08/lake.jpg)"></div>
                                     </a>
                                     <div class="content-wrap">

@@ -1,6 +1,6 @@
 @extends('main')
 
-@section('title','')
+@section('title',$author->author_name)
 
 @section('content')
 
@@ -42,12 +42,12 @@
                         </a>
                         <div class="content-wrap">
                             <div class="entry-header align-center">
-                                <span class="category"><a href="../../tag/adventure/index.html">Adventure</a></span>
-                                <h2 class="title h4"><a href="../../camping-in-an-abandoned-house-under-the-starry-night-at-hill-top/index.html" rel="bookmark">Camping in an abandoned house under the starry night at hill top</a></h2>
+                                <span class="category"><a href="tag/adventure/index.html">Adventure</a></span>
+                                <h2 class="title h4"><a href="camping-in-an-abandoned-house-under-the-starry-night-at-hill-top/index.html" rel="bookmark">Camping in an abandoned house under the starry night at hill top</a></h2>
                             </div>
                             <div class="entry-footer clearfix">
                                 <div class="author">
-                                    <a href="index.html" rel="author">
+                                    <a href="#" rel="author">
                                         <img class="avatar" src="http://www.gravatar.com/avatar/021e64775176cc4c7018e5e867f17de2?s=250&amp;d=mm&amp;r=x" alt="avatar">
                                         <span class="name">Biswajit Saha</span>
                                     </a>

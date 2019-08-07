@@ -97,35 +97,7 @@ class RoutesTableSeeder extends Seeder
         $child = Route::create([
             'route_name'=>'All Labour',
             'parent_route' => $parent->id,
-            'url'=>'landlords'
-        ]);
-        $child->roles()->attach($admin);
-        $child->roles()->attach($frontOffice);
-        $child->roles()->attach($manager);
-        $child->roles()->attach($coreAdmin);
-
-        $child = Route::create([
-            'route_name'=>'All Tenants',
-            'parent_route' => $parent->id,
-            'url'=>'tenants'
-        ]);
-        $child->roles()->attach($admin);
-        $child->roles()->attach($frontOffice);
-        $child->roles()->attach($manager);
-        $child->roles()->attach($coreAdmin);
-
-        $child = Route::create([
-            'route_name'=>'All Staff',
-            'parent_route' => $parent->id,
-            'url'=>'staff'
-        ]);
-        $child->roles()->attach($admin);
-
-
-        $child = Route::create([
-            'route_name'=>'All Customers',
-            'parent_route' => $parent->id,
-            'url'=>'customers'
+            'url'=>'croplabours'
         ]);
         $child->roles()->attach($admin);
         $child->roles()->attach($frontOffice);
@@ -142,7 +114,7 @@ class RoutesTableSeeder extends Seeder
         $child = Route::create([
             'route_name'=>'Production Costs',
             'parent_route' => $parent->id,
-            'url'=>'landlords'
+            'url'=>'cropProductions'
         ]);
         $child->roles()->attach($admin);
         $child->roles()->attach($frontOffice);
@@ -152,7 +124,7 @@ class RoutesTableSeeder extends Seeder
         $child = Route::create([
             'route_name'=>'Labour Costs',
             'parent_route' => $parent->id,
-            'url'=>'landlords'
+            'url'=>'cropLabourcosts'
         ]);
         $child->roles()->attach($admin);
         $child->roles()->attach($frontOffice);

@@ -69,6 +69,7 @@ class FrontEndController extends Controller
 
     public function singleStory($id){
         $story=Story::find($id);
-        return view('single-story')->withStory($story);
+        $author=Author::find($id);
+        return view('single-story')->withStory($story)->withAuthor($author);
     }
 }

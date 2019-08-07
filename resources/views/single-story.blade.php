@@ -1,6 +1,6 @@
 @extends('main')
 
-@section('title','')
+@section('title',$story->story_title)
 
 @section('content')
 
@@ -12,15 +12,19 @@
                     <div class="row">
                         <div class="col-md-offset-1 col-md-10">
 							<span class="category">
-								<a href="../tag/travel/index.html">Travel</a>
+								<a href="#">{{$story->story_category}}</a>
 							</span>
-                            <h1 class="title">My Memorable story of trip to grand canyon National Park</h1>
+                            <h1 class="title">{{$story->story_title}}</h1>
 
                             <div class="post-meta">
-                                <a class="author" href="../author/surabhi/index.html" rel="author">
-                                    <span class="name">Surabhi Gupta</span>
+                                <a class="author" href="{{url('single-author-archive/'.$author->id)}}" rel="author">
+                                    <span class="name">{{$author->author_name}}</span>
                                 </a>
-                                <time class="time" datetime="2017-05-14 15:05:00" itemprop="datePublished">May 14, 2017</time>
+                                <time class="time" datetime="2017-05-14 15:05:00" itemprop="datePublished">
+                                    {{date('M',strtotime($story->story_date))}}
+                                    {{\Carbon\Carbon::parse($story->story_date)->day}},
+                                    {{date('Y',strtotime($story->story_date))}}
+                                </time>
                             </div>
                         </div>
                     </div>
@@ -30,7 +34,9 @@
                 <div class="row">
                     <div class="col-md-offset-1 col-md-10">
                         <div class="post-content">
-                            <p>Cras in lectus laoreet, dignissim sapien sed, placerat nibh. Suspendisse mauris mi, vehicula eu dui non, consequat porttitor tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam lacus augue, volutpat ac velit posuere, bibendum ultrices mauris. Aliquam facilisis nisl ac euismod egestas.</p>
+                            <p>
+                                {{$story->story_content}}
+                            </p>
                             <h3 id="vestibulumatpretiumaugue">Vestibulum at pretium augue</h3>
                             <ul>
                                 <li>Donec varius volutpat aliquam. Proin maximus nulla vitae risus convallis venenatis.</li>
@@ -42,8 +48,6 @@
                             </blockquote>
                             <p>Phasellus dignissim rutrum viverra. Curabitur sodales quam non viverra consequat. Proin commodo turpis tellus, ut posuere libero ultrices at. Vestibulum nec orci malesuada, convallis ante a, mattis augue. In nibh mi, accumsan at dolor nec, consequat pretium ante.</p>
                             <p><img src="images/2017/05/camp-fire.jpg" alt=""></p>
-                            <p>Vivamus porta arcu sit amet diam dapibus scelerisque. Morbi vitae est enim. Nulla orci eros, vulputate et velit non, cursus porttitor arcu. Duis condimentum nibh sed cursus gravida. Aliquam eget tellus euismod arcu pulvinar consectetur. Sed blandit eget mi id aliquet.</p>
-                            <p>Sed rhoncus suscipit odio, et molestie leo tincidunt sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae sodales nibh.</p>
 
                         </div>
                         <div class="share-wrap clearfix align-center">
@@ -73,24 +77,24 @@
                         </div>						<div class="about-author-wrap">
                             <!-- start about the author -->
                             <div class="about-author clearfix">
-                                <a href="../author/surabhi/index.html" title="Surabhi Gupta"><img src="images/2018/04/Surabhi-Gupta-1.jpg" alt="Author image" class="avatar pull-left"></a>
+                                <a href="{{url('single-author-archive/'.$author->id)}}" title="Surabhi Gupta"><img src="images/2018/04/Surabhi-Gupta-1.jpg" alt="Author image" class="avatar pull-left"></a>
                                 <div class="details">
-                                    <h4 class="author h4">About <a href='../author/surabhi/index.html'>Surabhi Gupta</a></h4>
+                                    <h4 class="author h4">About <a href='{{url('single-author-archive/'.$author->id)}}'>{{$author->author_name}}</a></h4>
                                     <div class="bio">
-                                        Developer at GBJ solution. I love to travel, make new friends. I prefer tea over coffee.
+                                        {{$author->author_description}}
                                     </div>
                                     <ul class="meta-info">
                                         <li><a href="https://twitter.com/gbjsolution" target="_blank"><i class="fa fa-twitter"></i></a></li>
                                         <li><a href="https://www.facebook.com/gbjsolution" target="_blank"><i class="fa fa-facebook"></i></a></li>
                                         <li class="website"><a href="http://gbjsolution.com/" target="_blank"><i class="fa fa-globe"></i></a></li>
-                                        <li class="location"><i class="fa fa-map-marker"></i>India</li>
+                                        <li class="location"><i class="fa fa-map-marker"></i>{{$author->author_location}}</li>
                                     </ul>
                                 </div>
                             </div>
                             <!-- end about the author -->						</div>
                         <div class="subscribe-box-wrap">
                             <div class="subscribe">
-                                <h3 class="subscribe-title align-center">Subscribe to Polar</h3>
+                                <h3 class="subscribe-title align-center">Subscribe to {{config('app.name')}}</h3>
                                 <p class="align-center">Get the latest posts delivered right to your inbox.</p>
                                 <form method="post" action="http://polar.gbjsolution.com/subscribe/" class="sign-up-form">
                                     <input class="confirm" type="hidden" name="confirm"  /><input class="location" type="hidden" name="location"  /><input class="referrer" type="hidden" name="referrer"  />

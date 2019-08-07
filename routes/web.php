@@ -226,3 +226,12 @@ Route::resource('stories', 'StoryController');
 Route::resource('lendfarmtools', 'LendfarmtoolController');
 
 Route::resource('borrowedfarmtools', 'BorrowedfarmtoolController');
+
+
+Route::resource('croplabours', 'CroplabourController');
+
+Route::resource('croplabours', 'CroplabourController');
+
+Route::resource('cropLabourcosts', 'cropLabourcostsController');
+
+Route::resource('cropProductions', 'cropProductionController');

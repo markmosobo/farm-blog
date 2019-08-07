@@ -17,7 +17,8 @@ class DatabaseSeeder extends Seeder
 //            $this->call(MasterfileSeeder::class);
 //            $this->call(RoleTableSeeder::class);
 //            $this->call(UserTableSeeder::class);
-            $this->call(AboutSeeder::class);
+//            $this->call(AboutSeeder::class);
+//            $this->call(QuotesSeeder::class);
             $this->call(RoutesTableSeeder::class);
         });
 
