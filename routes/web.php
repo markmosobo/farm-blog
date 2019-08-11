@@ -235,3 +235,5 @@ Route::resource('croplabours', 'CroplabourController');
 Route::resource('cropLabourcosts', 'cropLabourcostsController');
 
 Route::resource('cropProductions', 'cropProductionController');
+
+Route::resource('quotes', 'QuoteController');

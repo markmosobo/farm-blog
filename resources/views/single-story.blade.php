@@ -44,7 +44,11 @@
                             </ul>
                             <p>Praesent viverra varius nisi euismod aliquam. Etiam interdum rhoncus quam, eget auctor sem maximus a. Praesent rhoncus pulvinar tincidunt. Vestibulum eu velit eget turpis tincidunt pharetra non quis nulla.</p>
                             <blockquote>
-                                <p>It's not at all naturally human to see something like the Grand Canyon as beautiful.</p>
+                                <p>
+                                    @foreach($quotes as $quote)
+                                    {{$quote->quote}}
+                                    @endforeach
+                                </p>
                             </blockquote>
                             <p>Phasellus dignissim rutrum viverra. Curabitur sodales quam non viverra consequat. Proin commodo turpis tellus, ut posuere libero ultrices at. Vestibulum nec orci malesuada, convallis ante a, mattis augue. In nibh mi, accumsan at dolor nec, consequat pretium ante.</p>
                             <p><img src="images/2017/05/camp-fire.jpg" alt=""></p>

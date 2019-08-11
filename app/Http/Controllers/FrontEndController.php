@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\About;
 use App\Models\Author;
+use App\Models\Quote;
 use App\Models\Story;
 use Illuminate\Http\Request;
 
@@ -70,6 +71,8 @@ class FrontEndController extends Controller
     public function singleStory($id){
         $story=Story::find($id);
         $author=Author::find($id);
-        return view('single-story')->withStory($story)->withAuthor($author);
+        return view('single-story',[
+            'quotes'=>Quote::orderByRaw("RAND()")->take(1)->get()
+        ])->withStory($story)->withAuthor($author);
     }
 }
