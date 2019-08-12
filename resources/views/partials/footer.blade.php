@@ -4,17 +4,22 @@
             <div class="col-sm-4">
                 <!-- start recent post widget -->
                 <div class="widget">
-                    <h4 class="widget-title h6">Recent Post</h4>
+                    <h4 class="widget-title h6">Recent Stories</h4>
                     <div class="content recent-post">
+                        @foreach($recentstories as $story)
                         <div class="recent-single-post clearfix have-image">
-                            <a href="i-like-fishing-because-it-is-always-the-great-way-of-relaxing/index.html">
+                            <a href="{{url('single-story/'.$story->id)}}">
                                 <div class="post-thumb pull-left" style="background-image: url(images/2017/05/fishing-with-dog.jpg);"></div>
                             </a>
                             <div class="post-info">
-                                <h4 class="post-title"><a href="i-like-fishing-because-it-is-always-the-great-way-of-relaxing/index.html">I like fishing because it is always the great way of relaxing</a></h4>
-                                <div class="date"><a href="i-like-fishing-because-it-is-always-the-great-way-of-relaxing/index.html">May 14, 2017</a></div>
+                                <h4 class="post-title"><a href="{{url('single-story/'.$story->id)}}">{{$story->story_title}}</a></h4>
+                                <div class="date"><a href="#">
+                                        {{date('M',strtotime($story->story_date))}}
+                                        {{\Carbon\Carbon::parse($story->story_date)->day}},
+                                        {{\Carbon\Carbon::parse($story->story_date)->year}}</a></div>
                             </div>
                         </div>
+                        @endforeach
 
                     </div>
                 </div>
@@ -22,9 +27,15 @@
             <div class="col-sm-4">
                 <!-- start tag widget -->
                 <div class="widget">
-                    <h4 class="widget-title h6">Tag Cloud</h4>
+                    <h4 class="widget-title h6">Category Cloud</h4>
                     <div class="content tagcloud">
-                        <a href="tag/adventure/index.html">Adventure</a><a href="tag/getting-started/index.html">Getting Started</a><a href="tag/lifestyle/index.html">Lifestyle</a><a href="tag/music/index.html">Music</a><a href="tag/nature/index.html">Nature</a><a href="tag/travel/index.html">Travel</a><a href="tag/video/index.html">Video</a>
+                        <a href="{{url('adventure-story-categories')}}">Adventure</a>
+                        {{--<a href="#">Getting Started</a>--}}
+                        <a href="{{url('lifestyle-story-categories')}}">Lifestyle</a>
+                        <a href="{{url('music-story-categories')}}">Music</a>
+                        <a href="{{url('nature-story-categories')}}">Nature</a>
+                        <a href="{{url('travel-story-categories')}}">Travel</a>
+                        <a href="{{url('travel-story-categories')}}">Video</a>
                     </div>
                 </div>
                 <!-- end tag widget -->
@@ -63,10 +74,13 @@
             <div class="col-sm-4">
                 <!-- start tag widget -->
                 <div class="widget">
-                    <h4 class="widget-title h6">Text Widget</h4>
+                    <h4 class="widget-title h6">About {{config('app.name')}}</h4>
                     <div class="content about">
                         <p>
-                            It's a suitable place for adding small info about your site. Here you can add any text or html like this <strong>Bold Text</strong> or anything else.
+                            Farm app is hinged upon providing farming solutions by
+                            appreciating the experience accorded to us by the farmers'
+                            stories and working to share the vital informatin regarding
+                            research into traditional drugs sourced from <strong>Mother Nature </strong>.
                         </p>
                         {{--<p>--}}
                             {{--All widgets in this footer are reorderable. An email subscription form widget is also available within the theme. Which you can use in place of this text widget.--}}
@@ -84,15 +98,15 @@
                 <ul class="social-links">
                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                     <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                    <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                    <li><a href="rss/index.html"><i class="fa fa-rss"></i></a></li>
+                    {{--<li><a href="#"><i class="fa fa-google-plus"></i></a></li>--}}
+                    {{--<li><a href="#"><i class="fa fa-dribbble"></i></a></li>--}}
+                    {{--<li><a href="#"><i class="fa fa-instagram"></i></a></li>--}}
+                    {{--<li><a href="#"><i class="fa fa-linkedin"></i></a></li>--}}
+                    {{--<li><a href="rss/index.html"><i class="fa fa-rss"></i></a></li>--}}
                 </ul>                </div>
             <div class="copyright-info">
-                &copy; 2019 <a href="index.html">Polar</a>. All right Reserved.
-                Powered by <a href="https://ghost.org/">Ghost</a>
+                &copy; {{\Carbon\Carbon::now()->year}} <a href="{{url('/')}}">{{config('app.name')}}</a>. All right Reserved.
+                </a>
             </div>
         </div>
     </div>

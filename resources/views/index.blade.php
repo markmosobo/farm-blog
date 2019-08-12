@@ -10,7 +10,7 @@
                     <div class="cover-content-wrap align-center">
                         <h1 class="intro-title">Farming, stories and ideas.</h1>
                         <P class="intro-description">
-                            Minimal and modern theme for Ghost. Use it for personal blog or multi-author blog / magazine.
+                            A platform for farmers and bloggers to interact. More food, more knowledge.
                         </P>
                     </div>
                 </div>
@@ -30,8 +30,8 @@
                         </a>
                         <div class="content-wrap">
                             <div class="entry-header align-center">
-                                <span class="category"><a href="tag/lifestyle/index.html">{{$story->story_category}}</a></span>
-                                <h2 class="title h4"><a href="i-like-fishing-because-it-is-always-the-great-way-of-relaxing/index.html" rel="bookmark">I like fishing because it is always the great way of relaxing</a></h2>
+                                <span class="category"><a href="{{url('single-story/'.$story->id)}}">{{$story->story_category}}</a></span>
+                                <h2 class="title h4"><a href="{{url('single-story/'.$story->id)}}" rel="bookmark">{{$story->story_title}}</a></h2>
                             </div>
                             <div class="entry-footer clearfix">
                                 <div class="author">

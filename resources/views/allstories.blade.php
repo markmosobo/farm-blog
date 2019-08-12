@@ -123,8 +123,8 @@
                                     </a>
                                     <div class="content-wrap">
                                         <div class="entry-header align-center">
-                                            <span class="category"><a href="../tag/getting-started/index.html" rel="bookmark">1 Post</a></span>
-                                            <h2 class="title h4"><a href="../tag/getting-started/index.html" rel="bookmark">Getting Started</a></h2>
+                                            <span class="category"><a href="#" rel="bookmark">1 Post</a></span>
+                                            <h2 class="title h4"><a href="#" rel="bookmark">Getting Started</a></h2>
                                         </div>
                                     </div>
                                 </article>

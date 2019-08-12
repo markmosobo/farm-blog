@@ -28,9 +28,9 @@
     </script>
     <meta name="description" content="Thoughts, stories and ideas." />
     <link rel="shortcut icon" href="favicon.png" type="image/png" />
-    <link rel="canonical" href="index.html" />
+    <link rel="canonical" href="#" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
-    <link rel="next" href="page/2/index.html" />
+    <link rel="next" href="#" />
 
     <meta property="og:site_name" content="Polar" />
     <meta property="og:type" content="website" />
@@ -71,7 +71,7 @@
     </script>
 
     <meta name="generator" content="Ghost 2.12" />
-    <link rel="alternate" type="application/rss+xml" title="Farm-app" href="rss/index.html" />
+    <link rel="alternate" type="application/rss+xml" title="Farm-app" href="#" />
     <style type="text/css">
         nav .media {
             margin-top: 0;

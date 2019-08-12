@@ -34,7 +34,7 @@
                         </a>
                         <div class="content-wrap">
                             <div class="entry-header align-center">
-                                <span class="category"><a href="index.html">Travel</a></span>
+                                <span class="category"><a href="#">Travel</a></span>
                                 <h2 class="title h4"><a href="{{url('single-story/'.$story->id)}}" rel="bookmark">{{$story->story_title}}</a></h2>
                             </div>
                             <div class="entry-footer clearfix">
